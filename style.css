@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.top{
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(https://images.unsplash.com/photo-1589642314445-999ac13b0075?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMzYwOTV8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top .overlay{
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+    /* background-color: rgb(0, 0, 0.295); */
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 10vh;
+    color: white;
+    font-size: 30px;
+}
+
+.text h1{
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+.text .image{
+    background-image: url(https://images.unsplash.com/photo-1589665209931-949d5fd007e1?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8MTM2MDk1fHxlbnwwfHx8fHw%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    height: 300px;
+    width: 400px;
+}
+
+.rtext{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.rtext .p{
+    font-size: 30px;
+}
+
+.bottom{
+    display: flex;
+    width: 100%;
+    min-height: 40vh;
+}
+.b1{
+  width: 30%;
+  min-height: inherit;
+  background-image: url(https://plus.unsplash.com/premium_photo-1668061706855-26d4cf0f6248?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+.b1 h1{
+     text-align: center;
+     padding: 30px;
+}
+.b1 p{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+}
+.b2{
+  width: 30%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.b2 .up{
+    width: 100%;
+    min-height: 20vh;
+    background-image: url(https://media.istockphoto.com/id/1159913918/photo/wooden-walkway-on-the-sunset-beach.webp?b=1&s=170667a&w=0&k=20&c=GyIbJ-aa-w5R-CuYuMjharr3bbo5RI_DAe3ccl3E6uY=);
+    background-size: cover;
+    background-position: center;
+}
+.b2 .up h1{
+   text-align: center;
+   padding: 30px;
+}
+.b2 .up p{
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+.b2 .down{
+    width: 100%;
+    min-height: 20vh;
+    background-image: url(https://media.istockphoto.com/id/500539108/photo/old-gray-wall-texture-background.webp?b=1&s=170667a&w=0&k=20&c=9ZQoLY5XHBWy_Bh8Q8XgYFAf9Dayz7xCcUUu8gP0DTk=);
+    background-position: center;
+    background-size: cover;
+
+}
+.b2 .down .overlay{
+    position: relative;
+    width: 100%;
+    min-height: 20vh;
+    background-color: rgba(255, 255, 255, 0.47);
+}
+.b3{
+  width: 40%;
+  min-height: inherit;
+  background-image: url(https://media.istockphoto.com/id/1751737884/photo/black-magnifier-on-a-blue-background.jpg?s=612x612&w=0&k=20&c=Cz3dvt2SPZfDsCPp_Ih5fDrlMJya901DkCzN8hJz40o=);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.b3 .overlay{
+    justify-content: right;
+    position: relative;
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    padding: 4vw 3vh;
+}
+
+.b3 .overlay p{
+    padding: 1.2vh;
+}
+
+@media  (max-width:1514px) {
+    .rtext{
+        flex-direction: column;
+    }
+    .b3 .overlay{
+        width: 100%;
+        margin-left: initial;
+    }
+}
+
+@media (max-width:500px){
+    .text{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .text h1{
+        font-size: 5vh;
+    }
+    .text .image{
+        height: 200px;
+        width: 140px;
+        margin-top: 20px;
+    }
+    .rtext{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .rtext p{
+        margin-top: 10px;
+    }
+    .icon{
+        margin-top: 10px;
+    }
+    .bottom{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .b1{
+        width: 100%;
+        min-height: 30vh;
+    }
+    .b2{
+        width: 100%;
+    }
+    .b2 up{
+        min-height: 30vh;
+    }
+    .b3{
+        width: 100%;
+        min-height: 30vh;
+        background-position: left;
+    }
+}
