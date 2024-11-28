@@ -1,0 +1,42 @@
+# Simple To-Do List Application
+
+class TodoList:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, task):
+        self.tasks.append({"task": task, "completed": False})
+        print(f'Task "{task}" added to the list.')
+
+    def display_tasks(self):
+        if not self.tasks:
+            print("Your to-do list is empty.")
+            return
+        print("\nTo-Do List:")
+        for index, task in enumerate(self.tasks):
+            status = "✔️" if task["completed"] else "❌"
+            print(f"{index + 1}. {task['task']} [{status}]")
+
+    def complete_task(self, task_index):
+        if 0 <= task_index < len(self.tasks):
+            self.tasks[task_index]["completed"] = True
+            print(f'Task "{self.tasks[task_index]["task"]}" marked as completed.')
+        else:
+            print("Invalid task number.")
+
+# Main program
+if __name__ == "__main__":
+    todo_list = TodoList()
+    
+    # Adding initial tasks
+    todo_list.add_task("Hit the gym")
+    todo_list.add_task("Buy eggs")
+    
+    # Displaying tasks
+    todo_list.display_tasks()
+
+    # Example of completing a task (change the index as needed)
+    todo_list.complete_task(0)  # Completes "Hit the gym"
+    
+    # Displaying tasks again to see updates
+    todo_list.display_tasks()
