@@ -1,4 +1,3 @@
-# Simple To-Do List Application
 
 class TodoList:
     def __init__(self):
